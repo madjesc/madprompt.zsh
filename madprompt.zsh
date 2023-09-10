@@ -1,5 +1,7 @@
 # Custom prompt
-source ./git-prompt.sh
+private basedir=${${(%):-%x}:P:h:h}
+source $basedir/git-prompt.sh
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 autoload -U colors && colors
 
