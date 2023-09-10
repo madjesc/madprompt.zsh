@@ -1,5 +1,5 @@
 # Custom prompt
-private basedir=${${(%):-%x}:P:h}
+local basedir=${${(%):-%x}:P:h}
 source $basedir/git-prompt.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1
