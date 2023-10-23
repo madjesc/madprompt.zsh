@@ -6,7 +6,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 autoload -U colors && colors
 
 function precmd() {
-    echo -ne "\033]0;%M@%n %~\007"
+    echo -ne "\033]0;$USER@$HOSTNAME: ${PWD#$HOME\~}\007"
     local GIT_THING=`__git_ps1 " \uE085 %s"`
     local VENV_THING="%{$fg[cyan]%}"`[ -n $VIRTUAL_ENV ] && echo $VIRTUAL_ENV_PROMPT`"%{$reset_color%}"
     # VTE_PWD_THING=`__vte_osc7`
